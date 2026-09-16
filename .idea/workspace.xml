@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11c82230-96d7-4893-9a34-3ccfb38ae6ea" name="Changes" comment="" />
+    <list default="true" id="11c82230-96d7-4893-9a34-3ccfb38ae6ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Slot 3/product-service/src/main/java/com/fudn/product_service/dto/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Slot 3/product-service/src/main/java/com/fudn/product_service/dto/ProductResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +18,14 @@
     <persistenceIdMap>
       <entry key="_/Users/huephan/Documents/MSS301_FA26" value="3JOjO2k7ici3tOMDr03c8tdeqbt" />
     </persistenceIdMap>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Record" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -87,7 +99,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1789538974148</updated>
-      <workItem from="1789538978148" duration="3140000" />
+      <workItem from="1789538978148" duration="3695000" />
     </task>
     <servers />
   </component>

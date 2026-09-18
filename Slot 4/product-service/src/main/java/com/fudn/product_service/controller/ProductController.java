@@ -35,5 +35,9 @@ public class ProductController {
         return productService.updateProduct(id, productRequest);
     }
 
-
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable String id) {
+        productService.deleteProduct(id);
+    }
 }

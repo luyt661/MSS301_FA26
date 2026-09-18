@@ -71,5 +71,11 @@ public class ProductService {
         );
     }
 
-
+    public void deleteProduct(String id) {
+        if (!productRepository.existsById(id)) {
+            throw new ProductNotFoundException(id);
+        }
+        productRepository.deleteById(id);
+        log.info("Product {} is deleted", id);
+    }
 }

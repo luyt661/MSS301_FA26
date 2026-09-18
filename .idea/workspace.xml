@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11c82230-96d7-4893-9a34-3ccfb38ae6ea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Slot 3/product-service/src/main/java/com/fudn/product_service/service/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -101,7 +103,7 @@
       <option name="presentableId" value="Default" />
       <updated>1789538974148</updated>
       <workItem from="1789538978148" duration="4021000" />
-      <workItem from="1789712253420" duration="257000" />
+      <workItem from="1789712253420" duration="467000" />
     </task>
     <servers />
   </component>

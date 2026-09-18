@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import com.fudn.product_service.exception.ProductNotFoundException;
+
 import java.util.List;
 
 @Service
@@ -48,4 +50,26 @@ public class ProductService {
                 ))
                 .toList();
     }
+
+    public ProductResponse updateProduct(String id, ProductRequest productRequest) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new ProductNotFoundException(id));
+
+        product.setName(productRequest.name());
+        product.setDescription(productRequest.description());
+        product.setPrice(productRequest.price());
+
+        productRepository.save(product);
+
+        log.info("Product {} is updated", product.getId());
+
+        return new ProductResponse(
+                product.getId(),
+                product.getName(),
+                product.getDescription(),
+                product.getPrice()
+        );
+    }
+
+
 }

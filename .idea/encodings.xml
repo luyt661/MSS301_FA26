@@ -3,5 +3,11 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Slot 3/product-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Slot 4/product-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 5/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 5/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 5/product-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 6/inventory-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 6/order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Slot 6/product-service/src/main/java" charset="UTF-8" />
   </component>
 </project>

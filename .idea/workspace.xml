@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11c82230-96d7-4893-9a34-3ccfb38ae6ea" name="Changes" comment="">
+    <list default="true" id="11c82230-96d7-4893-9a34-3ccfb38ae6ea" name="Changes" comment="feat(todo4) Implement api deleteProduct trong ProductController">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Slot 3/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Slot 3/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Slot 3/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Slot 3/product-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slot 4/product-service/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Slot 4/product-service/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +32,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -44,6 +55,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Docker.product-service: Compose Deployment (1).executor": "Run",
     "Docker.product-service: Compose Deployment.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RequestMappingsPanelOrder0": "0",
@@ -52,6 +64,8 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.ProductServiceApplication (1).executor": "Run",
     "Spring Boot.ProductServiceApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -65,7 +79,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication (1)">
+    <configuration name="ProductServiceApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-service (1)" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fudn.product_service.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="product-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.fudn.product_service.ProductServiceApplication" />
@@ -79,6 +100,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="product-service: Compose Deployment (1)" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="Slot 4/product-service/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="product-service: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -89,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.product-service: Compose Deployment (1)" />
         <item itemvalue="Docker.product-service: Compose Deployment" />
       </list>
     </recent_temporary>
@@ -109,12 +139,53 @@
       <option name="presentableId" value="Default" />
       <updated>1789538974148</updated>
       <workItem from="1789538978148" duration="4021000" />
-      <workItem from="1789712253420" duration="2803000" />
+      <workItem from="1789712253420" duration="5528000" />
+      <workItem from="1790260427216" duration="1028000" />
     </task>
+    <task id="LOCAL-00001" summary="feat(TODO 1) : Implement logic updateProduct at ProductService">
+      <option name="closed" value="true" />
+      <created>1789721928334</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1789721928335</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(TODO 1) : Implement logic updateProduct at ProductService">
+      <option name="closed" value="true" />
+      <created>1789721938194</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1789721938194</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat(todo2) Implement logic deleteProduct trong ProductService">
+      <option name="closed" value="true" />
+      <created>1789722697495</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1789722697495</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(todo4) Implement api deleteProduct trong ProductController">
+      <option name="closed" value="true" />
+      <created>1789722750045</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1789722750045</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create project at slot 4" />
+    <MESSAGE value="feat(TODO 1) : Implement logic updateProduct at ProductService" />
+    <MESSAGE value="feat(todo2) Implement logic deleteProduct trong ProductService" />
+    <MESSAGE value="feat(todo4) Implement api deleteProduct trong ProductController" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(todo4) Implement api deleteProduct trong ProductController" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

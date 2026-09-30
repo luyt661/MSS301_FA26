@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # -------------------------
+  # Databases
+  # -------------------------
+  mysql:
+    image: mysql:8.3.0
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    volumes:
+      # Mount file init.sql (tạo 2 DB order_service và inventory_service)
+      - ./order-service/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      # Persist data
+      - mysql-data:/var/lib/mysql
+
+  mongodb:
+    image: mongo:7.0.5
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+      MONGO_INITDB_DATABASE: product-service
+    volumes:
+      - mongo-data:/data/db
+
+  mongo-express:
+    image: mongo-express:1.0
+    container_name: mongo-express
+    restart: unless-stopped
+    depends_on:
+      - mongodb
+    ports:
+      # Thay đổi cổng so với 8081 vì order-service đang dùng 8081
+      - "8083:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 123456
+      ME_CONFIG_MONGODB_SERVER: mongodb
+      ME_CONFIG_BASICAUTH: false
+
+  # -------------------------
+  # Microservices
+  # -------------------------
+  product-service:
+    build:
+      context: ./product-service
+      dockerfile: Dockerfile
+    container_name: product-service
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+    environment:
+      # Ghi đè cấu hình localhost trong application.properties
+      - SPRING_DATA_MONGODB_URI=mongodb://root:123456@mongodb:27017/product-service?authSource=admin
+
+  order-service:
+    build:
+      context: ./order-service
+      dockerfile: Dockerfile
+    container_name: order-service
+    restart: on-failure
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/order_service
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=mysql
+
+  inventory-service:
+    build:
+      context: ./inventory-service
+      dockerfile: Dockerfile
+    container_name: inventory-service
+    restart: on-failure
+    ports:
+      - "8082:8082"
+    depends_on:
+      - mysql
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/inventory_service
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=mysql
+
+volumes:
+  mysql-data:
+  mongo-data:

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mssql:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mssql-media-pe:2022
+    container_name: mssql-media-pe
+    platform: linux/amd64
+    restart: always
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=YourStrong@Passw0rd
+    ports:
+      - "1433:1433"
+    volumes:
+      - mssql_data:/var/opt/mssql
+
+volumes:
+  mssql_data:
